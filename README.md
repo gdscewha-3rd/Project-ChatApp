@@ -1,6 +1,6 @@
 # Project-ChatApp
 
----
+
 
 ### 주제
 
@@ -26,6 +26,7 @@ Flutter, Firebase
 - message
 - settings
 
+<br>
 ### 프로젝트 일정 (6/15~6/28)
 
 #### 6/15~6/22
@@ -46,5 +47,7 @@ Flutter, Firebase
 <br>
 
 _참고할 영상_
+<br>
 https://youtube.com/playlist?list=PLD46K4dpufBEMDz5UblupcWLUiS2hFBXI
+<br>
 https://youtu.be/9zBWglEaGuQ

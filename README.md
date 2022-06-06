@@ -26,7 +26,7 @@ Flutter, Firebase
 - message
 - settings
 
-<br>
+
 ### 프로젝트 일정 (6/15~6/28)
 
 #### 6/15~6/22

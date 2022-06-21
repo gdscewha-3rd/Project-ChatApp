@@ -31,7 +31,7 @@ Flutter, Firebase
 #### 6/15~6/22
 
 - [ ] firebase 연결
-- [ ] tab bar
+- [x] tab bar
 - [ ] hello screen
 - [ ] authentication - login screen
 - [ ] user record - people screen

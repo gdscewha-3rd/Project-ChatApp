@@ -12,42 +12,27 @@ Flutter, Firebase
 
 ### 기능
 
-- 사용자 인증 - 로그인
-- 사용자 상태 설정
-- 목록에서 사람 검색
+- 사용자 이름 입력 - 로그인
 - 실시간으로 메시지 주고 받기
 
 ### pages
 
 - hello
 - login
-- people
-- chats
-- message
-- settings
+- chatting
 
 
 ### 프로젝트 일정 (6/15~6/28)
 
-#### 6/15~6/22
-
-- [ ] firebase 연결
-- [x] tab bar
+- [x] firebase 연결
 - [ ] hello screen
-- [ ] authentication - login screen
-- [ ] user record - people screen
-
-#### 6/23~6/28
-
-- [ ] message screen
-- [ ] chats screen
-- [ ] user state - settings screen
-- [ ] search bar
-
+- [ ] login screen 
+- [ ] chatting screen
+- [ ] UI 디자인
 <br>
 
 _참고할 영상_
 <br>
-https://youtube.com/playlist?list=PLD46K4dpufBEMDz5UblupcWLUiS2hFBXI
+https://www.youtube.com/watch?v=0_OyLORGvdg
 <br>
-https://youtu.be/9zBWglEaGuQ
+https://www.youtube.com/watch?v=JxFj7iNbDF0

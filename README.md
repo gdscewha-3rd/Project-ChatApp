@@ -26,8 +26,8 @@ Flutter, Firebase
 
 - [x] firebase 연결
 - [ ] hello screen
-- [ ] login screen 
-- [ ] chatting screen
+- [x] login screen 
+- [x] chatting screen
 - [ ] UI 디자인
 <br>
 

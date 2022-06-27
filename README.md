@@ -25,10 +25,10 @@ Flutter, Firebase
 ### 프로젝트 일정 (6/15~6/28)
 
 - [x] firebase 연결
-- [ ] hello screen
+- [x] hello screen
 - [x] login screen 
 - [x] chatting screen
-- [ ] UI 디자인
+- [x] UI 디자인
 <br>
 
 _참고할 영상_

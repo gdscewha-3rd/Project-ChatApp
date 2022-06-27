@@ -14,7 +14,7 @@ class ChattingItem extends StatelessWidget {
     //내가 보낸 메시지인 경우
     var isMe=chattingModel.id==p.id;
     return Container(
-      margin: isMe? EdgeInsets.fromLTRB(0,15,15,0): EdgeInsets.fromLTRB(15,15,0,0),
+      margin: isMe? EdgeInsets.fromLTRB(0,5,15,15): EdgeInsets.fromLTRB(15,5,0,15),
       child: Row(
         //메시지 정렬
         mainAxisAlignment: isMe?MainAxisAlignment.end:MainAxisAlignment.start,

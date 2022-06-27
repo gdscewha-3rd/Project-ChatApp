@@ -16,6 +16,7 @@ class _EntrancePageState extends State<EntrancePage> {
 
   void initState(){
     _controller = TextEditingController();
+
     super.initState();
   }
 
@@ -44,10 +45,12 @@ class _EntrancePageState extends State<EntrancePage> {
             GestureDetector(
             behavior: HitTestBehavior.translucent,
             onTap: () async {
+              var u=Uuid().v1();
+              print('u>$u');
               //chatting page로 이동
               Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => ChangeNotifierProvider(
-                      create: (context) => ChattingProvider(Uuid().v1(),_controller.text),
+                      create: (context) => ChattingProvider(u,_controller.text),
                       child: ChattingPage(),
                   )
               ));

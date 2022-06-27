@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:chat_app/models/ChattingModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
+import 'local_utils/ChattingProvider.dart';
 import 'local_widgets/chatting_item.dart';
 
 class ChattingPage extends StatefulWidget {
@@ -12,14 +16,38 @@ class ChattingPage extends StatefulWidget {
 
 class _ChattingPageState extends State<ChattingPage> {
   late TextEditingController _controller;
+  late StreamSubscription _streamSubscription;
+
+  bool firstLoad=true;
+
 
   void initState(){
     _controller = TextEditingController();
+    var p=Provider.of<ChattingProvider>(context, listen: false);
+
+    _streamSubscription=p.getSnapshot().listen((event){
+      if(firstLoad){
+        firstLoad=false;
+        return;
+      }
+      p.addOne(ChattingModel.fromJson(event.docs[0].data()));
+    });
+
+
+    Future.microtask(() {
+      p.load();
+    });
     super.initState();
+  }
+
+  void dispose(){
+    _streamSubscription?.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    var p=Provider.of<ChattingProvider>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[400],
@@ -40,11 +68,8 @@ class _ChattingPageState extends State<ChattingPage> {
             //메시지 표현
             Expanded(
               child: ListView(
-              children: [
-                ChattingItem(chattingModel: ChattingModel('','abc','hihihihih',1)),
-                ChattingItem(chattingModel: ChattingModel('','abc','hihihih',1)),
-                ChattingItem(chattingModel: ChattingModel('','abc','hihihi',1)),
-              ],
+                reverse: true, //아래부터 채우기
+              children: p.chattingList.map((e)=>ChattingItem(chattingModel: e)).toList(),
             )),
 
             //경계선
@@ -80,11 +105,18 @@ class _ChattingPageState extends State<ChattingPage> {
                   ),
 
                   //send 버튼
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: 0, horizontal: 12),
-                    child: Icon(
-                      Icons.send,
-                      size: 30,
+                  GestureDetector(
+                    onTap: (){
+                      var text=_controller.text;
+                      _controller.text='';
+                      p.send(text);
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 12),
+                      child: Icon(
+                        Icons.send,
+                        size: 30,
+                      ),
                     ),
                   ),
                 ],

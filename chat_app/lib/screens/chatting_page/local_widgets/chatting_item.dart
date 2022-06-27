@@ -28,7 +28,8 @@ class ChattingItem extends StatelessWidget {
                   child: Text(
                       chattingModel.name,
                       style: TextStyle(
-                          fontSize:17
+                          color: Colors.indigo[600],
+                          fontSize:18
                       ),
                   )
               ),
@@ -42,14 +43,14 @@ class ChattingItem extends StatelessWidget {
                       topRight: Radius.circular(30),
                       bottomLeft: Radius.circular(isMe?30:0),
                       bottomRight: Radius.circular(isMe?0:30)),
-                  color: isMe? Colors.amber: Colors.blue[200],
+                  color: isMe? Colors.deepPurple[200]: Colors.blue[400],
                 ),
                 //텍스트
                 child: Text(
                   chattingModel.text,
                   style: TextStyle(
-                      color: Colors.black,
-                    fontSize: 16
+                      color: Colors.white,
+                    fontSize: 19
                   ),
                 )
               )

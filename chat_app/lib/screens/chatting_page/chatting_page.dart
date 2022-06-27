@@ -49,8 +49,10 @@ class _ChattingPageState extends State<ChattingPage> {
   Widget build(BuildContext context) {
     var p=Provider.of<ChattingProvider>(context);
     return Scaffold(
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
-        backgroundColor: Colors.blue[400],
+        backgroundColor: Colors.blue[200],
+        elevation: 0.0,
         //뒤로가기 버튼
         leading: GestureDetector(
           onTap: (){
@@ -76,7 +78,7 @@ class _ChattingPageState extends State<ChattingPage> {
             Divider(
               thickness: 1,
               height: 1,
-              color: Colors.grey[400],
+              color: Colors.blueGrey[100],
             ),
 
             //메시지 입력칸
@@ -89,16 +91,16 @@ class _ChattingPageState extends State<ChattingPage> {
                   //입력
                   Expanded(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                      padding: EdgeInsets.symmetric(vertical: 1, horizontal: 20),
                       child: TextField(
                         controller: _controller,
                         maxLines: null,
                         keyboardType: TextInputType.multiline,
-                        style: TextStyle(fontSize: 25),
+                        style: TextStyle(fontSize: 23),
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: '메시지 입력',
-                            hintStyle: TextStyle(color: Colors.grey)
+                            hintStyle: TextStyle(color: Colors.grey[400])
                         ),
                       ),
                     ),
@@ -116,6 +118,7 @@ class _ChattingPageState extends State<ChattingPage> {
                       child: Icon(
                         Icons.send,
                         size: 30,
+                        color: Colors.blue[400]
                       ),
                     ),
                   ),

@@ -51,6 +51,10 @@ class _ChattingPageState extends State<ChattingPage> {
     return Scaffold(
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
+        title: Text(
+            'Chatting Room',
+            style: TextStyle(color: Colors.blueGrey[700])
+        ),
         backgroundColor: Colors.blue[200],
         elevation: 0.0,
         //뒤로가기 버튼

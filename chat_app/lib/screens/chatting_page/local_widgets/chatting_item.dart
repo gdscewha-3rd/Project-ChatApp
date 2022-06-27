@@ -43,7 +43,7 @@ class ChattingItem extends StatelessWidget {
                       topRight: Radius.circular(30),
                       bottomLeft: Radius.circular(isMe?30:0),
                       bottomRight: Radius.circular(isMe?0:30)),
-                  color: isMe? Colors.deepPurple[200]: Colors.blue[400],
+                  color: isMe? Colors.deepPurple[200]: Colors.blue[300],
                 ),
                 //텍스트
                 child: Text(

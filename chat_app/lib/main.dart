@@ -1,5 +1,6 @@
 import 'package:chat_app/screens/entrance_page/entrance_page.dart';
 import 'package:chat_app/screens/entrance_page/local_utils/EntranceProvider.dart';
+import 'package:chat_app/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
+      home: Splash(),
     );
   }
 }
